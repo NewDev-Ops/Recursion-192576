@@ -27,7 +27,7 @@ def fibonacci(n):
 #for numbers in range(int(input("Which number are you fibing??: "))):
 #       print(f'{numbers}: {fibonacci(numbers)} ')
 
-
+#
 # A function is independent of an object/variable but a method tends to depend on one
 fcache = {} #dictionary
 def fib(n):
