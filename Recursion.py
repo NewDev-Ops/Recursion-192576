@@ -1,3 +1,6 @@
+
+from functools import lru_cache
+
 print("This is recursion")
 
 # Factorial numbering
@@ -44,5 +47,19 @@ def fib(n):
     fcache[n] = value
     return value
 
-for n in range(1, int(input("What value is your maximum: "))):
-        print(f"{fib(n)}\n")
+#for n in range(1, int(input("What value is your maximum: "))):
+ #       print(f"{fib(n)}\n")
+
+
+# Function Decoration
+@lru_cache(maxsize=100)
+def ID3(x):
+    if x == 1:
+        return 1
+    elif x == 2:
+        return 1
+    elif x > 2:
+        return ID3(x-1) + ID3(x-2)
+
+for i in range(1, int(input("What value is your maximum: "))):
+    print(f"{ID3(i)}\n")
